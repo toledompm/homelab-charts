@@ -5,6 +5,9 @@ image:
   pullPolicy: IfNotPresent
   tag: ""
 
+# Secrets to be injected as environment variables to the container (must exist in the same namespace)
+# secretEnv: ""
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
