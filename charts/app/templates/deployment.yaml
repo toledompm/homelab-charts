@@ -44,6 +44,18 @@ spec:
             - secretRef:
                 name: {{ . }}
           {{- end }}
+          {{- with .Values.secretFiles }}
+          volumeMounts: 
+            - mountPath: {{ .mountPath }}
+              name: {{ .name }}
+              readOnly: true
+          {{- end }}
+      {{- with .Values.secretFiles }}
+      volumes: 
+        - name: {{ .name }}
+          secret: 
+            secretName: {{ .name }}
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

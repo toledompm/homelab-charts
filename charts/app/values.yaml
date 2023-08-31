@@ -8,6 +8,11 @@ image:
 # Secrets to be injected as environment variables to the container (must exist in the same namespace)
 # secretEnv: ""
 
+# Secrets to be mounted as files to the container (must exist in the same namespace)
+# secretFiles:
+#   - name: secret-file
+#     mountPath: /etc/secret-volume
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
