@@ -44,14 +44,14 @@ spec:
             - secretRef:
                 name: {{ . }}
           {{- end }}
-          {{- with .Values.secretFiles }}
-          volumeMounts: 
+          {{- range .Values.secretFiles }}
+          volumeMounts:
             - mountPath: {{ .mountPath }}
               name: {{ .name }}
               readOnly: true
           {{- end }}
-      {{- with .Values.secretFiles }}
-      volumes: 
+      {{- range .Values.secretFiles }}
+      volumes:
         - name: {{ .name }}
           secret: 
             secretName: {{ .name }}
