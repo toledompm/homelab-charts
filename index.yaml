@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  post-api:
+  - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2023-08-31T00:24:40.573974825Z"
+    description: A Helm chart for Kubernetes
+    digest: 549794dfec917ed3d56cad89045273f942392eadc77fe3d5bb4cc200e4accb4c
+    name: post-api
+    type: application
+    urls:
+    - https://github.com/toledompm/homelab-charts/releases/download/post-api-0.1.0/post-api-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-08-31T00:24:40.573983425Z"
