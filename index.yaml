@@ -3,6 +3,16 @@ entries:
   app:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2023-10-08T15:44:44.609228379Z"
+    description: A Helm chart for Kubernetes
+    digest: 84a01e9786f8db055d48df7ee8c8cb1194a209d4eb70b75e0d1f401e27a34b19
+    name: app
+    type: application
+    urls:
+    - https://github.com/toledompm/homelab-charts/releases/download/app-0.4.0/app-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2023-08-31T16:29:50.720574436Z"
     description: A Helm chart for Kubernetes
     digest: 1e16235cbc723a94e2fe3af2a98e3591b4be3552bf1e9d3d2ffb42b4977a8528
@@ -62,4 +72,4 @@ entries:
     urls:
     - https://github.com/toledompm/homelab-charts/releases/download/post-api-0.1.0/post-api-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-31T16:29:50.720593536Z"
+generated: "2023-10-08T15:44:44.60934278Z"
