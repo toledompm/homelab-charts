@@ -48,14 +48,20 @@ spec:
             - secretRef:
                 name: {{ . }}
           {{- end }}
-          {{- range .Values.secretFiles }}
           volumeMounts:
+          {{- with .Values.volumeMounts }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- range .Values.secretFiles }}
             - mountPath: {{ .mountPath }}
               name: {{ .name }}
               readOnly: true
           {{- end }}
-      {{- range .Values.secretFiles }}
       volumes:
+      {{- with .Values.volumes }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- range .Values.secretFiles }}
         - name: {{ .name }}
           secret: 
             secretName: {{ .name }}
